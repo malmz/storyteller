@@ -1,0 +1,10 @@
+{
+	"inside": {
+		"text": "You are inside the building",
+		"actions": [{ "text": "Go out", "to": "outside" }]
+	},
+	"outside": {
+		"text": "You are outside the building",
+		"actions": [{ "text": "Go in", "to": "inside" }]
+	}
+}
