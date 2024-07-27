@@ -4,7 +4,7 @@
 	const { children, class: klass }: { children: Snippet; class?: string } = $props();
 </script>
 
-<p class="my-4 border-l border-amber-500 bg-amber-950 p-4 font-mono">
+<p class="border-l border-amber-500 bg-amber-950 p-4 font-mono">
 	<span class="reveal">{@render children()}</span>
 </p>
 

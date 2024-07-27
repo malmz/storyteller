@@ -1,10 +1,20 @@
 {
 	"inside": {
 		"text": "You are inside the building",
-		"actions": [{ "text": "Go out", "to": "outside" }]
+		"actions": [
+			{ "text": "Go out", "to": "outside" },
+			{ "text": "Exit", "to": "hub" }
+		]
 	},
 	"outside": {
 		"text": "You are outside the building",
-		"actions": [{ "text": "Go in", "to": "inside" }]
+		"actions": [
+			{ "text": "Go in", "to": "inside" },
+			{ "text": "Exit", "to": "hub" }
+		]
+	},
+	"hub": {
+		"text": "You are in the hub",
+		"actions": [{ "text": "Start", "to": "outside" }]
 	}
 }

@@ -1,0 +1,18 @@
+@import './styles/krypton.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--font-mono: 'Monaspace Krypton';
+}
+@supports (font-variation-settings: normal) {
+	:root {
+		--font-mono: 'Monaspace Krypton Var';
+	}
+}
+
+body {
+	@apply bg-stone-950 text-stone-50;
+}
