@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
-	import Client from '../../client.svelte';
-	import Terminal from '../../terminal.svelte';
-	import Action from '../../action.svelte';
+	import Client from '../../../components/client.svelte';
+	import Terminal from '../../../components/terminal.svelte';
+	import Action from '../../../components/action.svelte';
 
 	const { data } = $props();
 </script>
