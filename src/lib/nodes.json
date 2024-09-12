@@ -18,5 +18,10 @@
 		"NodeId": "inside",
 		"Text": "You are inside the building",
 		"Links": ["go_out", "exit"]
+	},
+	{
+		"NodeId": "html",
+		"Text": "You are inside the building <br> You are inside the building</p>",
+		"Links": ["go_out", "exit"]
 	}
 ]

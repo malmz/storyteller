@@ -12,7 +12,7 @@
 	>
 		<div in:fade={{ delay: 300 }} out:fly={{ y: -100, duration: 300 }}>
 			<Terminal>
-				{data.node.text}
+				{@html data.node.text}
 			</Terminal>
 		</div>
 		<div
