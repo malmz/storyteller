@@ -1,20 +1,22 @@
-{
-	"inside": {
-		"text": "You are inside the building",
-		"actions": [
-			{ "text": "Go out", "to": "outside" },
-			{ "text": "Exit", "to": "hub" }
-		]
+[
+	{
+		"NodeId": "entrypoint",
+		"Text": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae veniam error facilis dolores, ad possimus vitae similique magnam, maiores nobis ducimus tempora? Tenetur, molestiae voluptate? Ipsum aliquam hic natus minima?",
+		"Links": ["open_door"]
 	},
-	"outside": {
-		"text": "You are outside the building",
-		"actions": [
-			{ "text": "Go in", "to": "inside" },
-			{ "text": "Exit", "to": "hub" }
-		]
+	{
+		"NodeId": "hub",
+		"Text": "You are in the hub",
+		"Links": ["start"]
 	},
-	"hub": {
-		"text": "You are in the hub",
-		"actions": [{ "text": "Start", "to": "outside" }]
+	{
+		"NodeId": "outside",
+		"Text": "You are outside the building",
+		"Links": ["go_in", "exit"]
+	},
+	{
+		"NodeId": "inside",
+		"Text": "You are inside the building",
+		"Links": ["go_out", "exit"]
 	}
-}
+]

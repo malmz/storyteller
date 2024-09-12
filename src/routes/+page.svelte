@@ -14,12 +14,10 @@
 		Ipsum aliquam hic natus minima?
 	</Terminal>
 	<div class="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
-		<Client>
-			{#each actions as { action, to }, i}
-				<div in:fly|global={{ x: -100, delay: i * 300 + 700, duration: 500 }}>
-					<Action href={to} class="w-full">{action}</Action>
-				</div>
-			{/each}
-		</Client>
+		{#each actions as { action, to }, i}
+			<div in:fly|global={{ x: -100, delay: i * 300 + 700, duration: 500 }}>
+				<Action href={to} class="w-full">{action}</Action>
+			</div>
+		{/each}
 	</div>
 </div>

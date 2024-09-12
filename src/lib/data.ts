@@ -1,10 +1,14 @@
 import nodeData from './nodes.json';
-interface NodeData {
-  text: string;
-  actions: {
-    text: string;
-    to: string;
-  }[]
-}
+import linksData from './links.json';
 
-export const nodes = new Map<string, NodeData>(Object.entries(nodeData))
+const links = new Map(linksData.map((link) => [link.LinkId, { text: link.Text, to: link.Node }]));
+
+export const nodes = new Map(
+	nodeData.map((node) => [
+		node.NodeId,
+		{
+			text: node.Text,
+			actions: node.Links.map((link) => links.get(link)!)
+		}
+	])
+);
