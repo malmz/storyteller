@@ -47,6 +47,11 @@
 					class="grid grid-cols-1 gap-3"
 				>
 					<div in:fly|global={{ x: -100, delay: 0 * 300 + 700, duration: 500 }}>
+						{#if data.error}
+							<p in:fade={{ duration: 100 }} class="mb-2 font-mono text-red-500">
+								{data.error}
+							</p>
+						{/if}
 						<div
 							class="flex gap-4 border-l border-amber-500 bg-amber-950 p-4 font-mono text-amber-500"
 						>
@@ -56,6 +61,7 @@
 								name="p"
 								placeholder="password..."
 								class="w-full border-amber-500 bg-transparent underline-offset-4 outline-none placeholder:text-amber-700 focus:underline"
+								required
 							/>
 						</div>
 					</div>

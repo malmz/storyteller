@@ -11,6 +11,7 @@ export const load: PageServerLoad = async ({ params, url }) => {
 		return {
 			key: params.node,
 			type: 'password' as const,
+			error: searchParams.get('p') != null ? 'Wrong password' : undefined,
 			node: node.password
 		};
 	}
