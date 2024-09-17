@@ -13,6 +13,8 @@ const nodesSchema = z.array(
 	z.object({
 		NodeId: z.string(),
 		Text: z.string(),
+		Password: z.string().optional(),
+		PasswordPrompt: z.string().optional(),
 		Links: z.array(z.string())
 	})
 );
@@ -78,7 +80,8 @@ export const nodesCache = new FileCache('./data/nodes.json', [linksCache], async
 			node.NodeId,
 			{
 				text: node.Text,
-				actions: node.Links.map((link) => links.get(link)!)
+				actions: node.Links.map((link) => links.get(link)!),
+				password: node.Password ? { text: node.PasswordPrompt, password: node.Password } : undefined
 			}
 		])
 	);
