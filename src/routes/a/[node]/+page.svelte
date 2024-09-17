@@ -31,7 +31,7 @@
 		</div>
 	{:else if data.type === 'password'}
 		<div
-			class="page-container mx-auto my-4 flex w-full max-w-[80ch] grow flex-col justify-between px-4"
+			class="page-container mx-auto my-4 flex w-full max-w-[80ch] grow flex-col justify-between overflow-hidden px-4 pb-16"
 		>
 			<div in:fade={{ delay: 300 }} out:fly={{ y: -100, duration: 300 }}>
 				<Terminal>
