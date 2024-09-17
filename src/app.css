@@ -15,4 +15,7 @@
 
 body {
 	@apply bg-stone-950 text-stone-50;
+
+	min-height: 100vh;
+	min-height: 100dvh;
 }

@@ -10,7 +10,7 @@
 {#key data.key}
 	{#if data.type === 'text'}
 		<div
-			class="page-container mx-auto my-4 flex w-full max-w-[80ch] grow flex-col justify-between px-4"
+			class="page-container mx-auto my-4 flex w-full max-w-[80ch] grow flex-col justify-between overflow-hidden px-4 pb-16"
 		>
 			<div in:fade={{ delay: 300 }} out:fly={{ y: -100, duration: 300 }}>
 				<Terminal>
@@ -19,7 +19,7 @@
 			</div>
 			<div
 				in:fade={{ delay: 300 }}
-				out:fly={{ y: 100, duration: 300 }}
+				out:fly|global={{ y: 100, duration: 300 }}
 				class="grid gap-3 sm:grid-cols-2 md:grid-cols-3"
 			>
 				{#each data.node.actions as { text, to }, i}
@@ -43,7 +43,7 @@
 				<form
 					method="get"
 					in:fade={{ delay: 300 }}
-					out:fly={{ y: 100, duration: 300 }}
+					out:fly|global={{ y: 100, duration: 300 }}
 					class="grid grid-cols-1 gap-3"
 				>
 					<div in:fly|global={{ x: -100, delay: 0 * 300 + 700, duration: 500 }}>
@@ -53,6 +53,7 @@
 							&gt;
 							<input
 								type="password"
+								name="p"
 								placeholder="password..."
 								class="w-full border-amber-500 bg-transparent underline-offset-4 outline-none placeholder:text-amber-700 focus:underline"
 							/>
